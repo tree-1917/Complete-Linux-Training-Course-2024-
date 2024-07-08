@@ -333,21 +333,4 @@ Taking a snapshot of a VM allows you to capture the current state of the VM, inc
 
 Taking snapshots of your VMs is a powerful tool for managing and maintaining your virtual environments. Whether you're using VirtualBox, VMware, or Hyper-V, the process is straightforward and can save you a lot of time and hassle.
 
-### 38. Important Things to Remember in Linux
-
-- How is Super-user account called Root ?
-- What mean Linux Case-sensitive system ?
-- What is Linux Kernel ?
-- Linux is Cli or GUI ?
-
-### 39. Access to Linux System
-
-- How To Access To Linux System
-  - Console (VGA,HDMI,DVI)
-  - Remote
-    - RDP (windos)
-    - sharing (mac)
-    - Putty (linux)
-    - SSH built-in client
-
-### 40. Download and Install Putty
+---

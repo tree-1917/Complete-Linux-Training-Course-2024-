@@ -1,4 +1,4 @@
-### Creating a Ubuntu Virtual Machine with QEMU and libvirt
+# Creating a Ubuntu Virtual Machine with QEMU and libvirt
 
 #### Step-by-Step Tutorial
 
