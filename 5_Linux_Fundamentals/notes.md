@@ -94,3 +94,78 @@
   - when the error occoured
 
 ### 69. Standard Output to a File (tee command)
+
+- How to use `Tee` ?
+- Make 3 examples show the common useage for `Tee` ?
+
+### 70. Pipes ( | )
+
+- What is `Pipes` ?
+- Make 3 examples shwo the common useage for `Pipes` ?
+
+### 71. File Maintenance Commands (cp, rm, mv, mkdir, rmdir, chown ,chgrp)
+
+- What are File Maintenance Commands ?
+  - Make a table with common 10 commnad in file maintance
+  - Make exampels to show them how they use together
+
+### 72. File Display Commands (cat, less, more, head, tail)
+
+- What are Display Commands ?
+  - Make a table with common 10 commnad in Display commands
+  - Make examples to show them how they use together .
+
+### 73. Filters / Text Processing Commands
+
+- What are Filters / text Proccessing commnands
+  - Make a table with common 10 commonds in filter / text proccessing commonds
+  - Make examples to show them how they use together
+    - cut
+    - awk
+    - grep and egrep
+    - sort
+    - uniq
+    - wc
+
+### 74. cut - Text Processors Commands
+
+- What is `Cut` Command ?
+- Make a table a 10 common options with cut ?
+- Make a 3 Examples Show how to use `Cut` ?
+
+### 75. awk - Text Processors Commands
+
+- What is `awk` Command ?
+- Make a table a 10 common options with awk ?
+- Make a 3 Examples Show how to use `awk` ?
+
+### 76. grep/egrep - Text Processors Commands
+
+- What is `grep` Command ?
+- Make a table a 10 common options with grep ?
+- Make a 3 Examples Show how to use `grep` ?
+- Make a table of common 15 regler experssion with grep
+
+### 77. sort/uniq - Text Processors Commands
+
+- What is `sort/uniq` Command ?
+- Make a table a 10 common options with `sort/uniq` ?
+- Make a 3 Examples Show how to use `sort/uniq` ?
+
+### 78. wc - Text Processors Commands
+
+- What is `wc` Command ?
+- Make a table a 10 common options with `wc` ?
+- Make a 3 Examples Show how to use `wc` ?
+
+### 79. Compare Files (diff and cmp)
+
+- What is `diff&cmp` Command ?
+- Make a table a 10 common options with `diff&cmp` ?
+- Make a 3 Examples Show how to use `diff&cmp` ?
+
+### 80. Compress and uncompress (tar, gzip, gunzip)
+
+- What is `tar, gzip, gunzip` Command ?
+- Make a table a 10 common options with `tar, gzip, gunzip` ?
+- Make a 3 Examples Show how to use `tar, gzip, gunzip` ?
