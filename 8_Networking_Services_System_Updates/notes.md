@@ -272,6 +272,139 @@ To enable the internet on a Linux VM, follow these steps:
 
 ---
 
+Here is the updated version of the SS command tutorial with the issue fixed, along with the proper use of anchor links for navigation and a complete guide for better clarity. This version will handle the anchor link bug and provide a smooth reading experience:
+
+## 146. 🚀 SS Command Tutorial: Network Visibility & Troubleshooting
+
+### 1. 🔍 What is the SS Command? <a name="what-is-the-ss-command"></a>
+
+The **SS command** (Socket Statistics) is a powerful Linux tool used to display detailed socket information. It's faster and more efficient than the older `netstat` command, making it ideal for network visibility and troubleshooting.
+
+### Key Features:
+
+- **Network Visibility**: View active connections, listening ports, and protocol states.
+- **Problem Diagnosis**: Helps identify slow or problematic network connections, dropped packets, and resource-heavy processes.
+
+### 2. 🔗 What is a Socket? <a name="what-is-a-socket"></a>
+
+A **socket** is an endpoint for data transmission in a network. It facilitates communication between devices or processes. Different types of sockets are used for different transmission protocols.
+
+### Types of Sockets:
+
+1. **TCP (Transmission Control Protocol)**:
+   - Ensures reliable communication by guaranteeing data arrives successfully.
+2. **UDP (User Datagram Protocol)**:
+   - Focuses on speed, sending data without confirming delivery.
+3. **Unix Socket**:
+   - Used for communication between programs on the same machine.
+
+```mermaid
+graph TD;
+    Client[Client] -->|Send Data| Server[Server];
+    Server -->|Acknowledgement| Client;
+    Process1[Unix Process 1] -->|Unix Socket| Process2[Unix Process 2];
+```
+
+### 3. 📜 History of SS Command
+
+The **SS command** was developed as a faster and modern alternative to the `netstat` command. It leverages advanced kernel interfaces and provides better performance for large-scale systems. As networks and systems expanded, `ss` became a crucial tool for administrators due to its efficiency.
+
+### 4. 📄 Common Options for the SS Command
+
+The following table lists commonly used `ss` command options:
+
+| **Option** | **Description**                        |
+| ---------- | -------------------------------------- |
+| `ss -t`    | Show only TCP connections              |
+| `ss -u`    | Show only UDP connections              |
+| `ss -x`    | Show Unix domain sockets               |
+| `ss -l`    | Display only listening sockets         |
+| `ss -p`    | Show processes using sockets           |
+| `ss -n`    | Show numeric addresses (no DNS lookup) |
+| `ss -s`    | Display summary of socket statistics   |
+| `ss -r`    | Display routing table information      |
+| `ss -a`    | Show all sockets (including listening) |
+| `ss -i`    | Show detailed socket information       |
+
+### 📝 Example Command Usage:
+
+- **List active TCP connections**:
+  ```bash
+  ss -t
+  ```
+- **Show processes using sockets**:
+  ```bash
+  ss -tp
+  ```
+- **Display Unix domain sockets**:
+  ```bash
+  ss -xl
+  ```
+
+### 5. ⚙️ Script: Practical Use of SS Command <a name="practical-use-of-ss-command"></a>
+
+Here’s a simple script to install and use the `ss` command for network troubleshooting.
+
+#### 🔧 Script: SS Command Practical Usage
+
+```bash
+#!/bin/bash
+
+# Check if ss command is available, if not install it
+if ! command -v ss &> /dev/null; then
+    echo "ss command not found. Installing iproute2 package..."
+    sudo apt-get update
+    sudo apt-get install iproute2 -y
+else
+    echo "ss command is already installed."
+fi
+
+# Display listening TCP connections
+echo "Showing listening TCP connections..."
+ss -tl
+
+# Display all established TCP and UDP connections
+echo "Displaying established TCP and UDP connections..."
+ss -tuan
+
+# Show summary of socket statistics
+echo "Displaying summary of socket statistics..."
+ss -s
+
+# Show processes using TCP connections
+echo "Displaying processes using TCP connections..."
+ss -tp
+
+# Show the routing table
+echo "Displaying routing table..."
+ss -r
+```
+
+#### 📄 Explanation:
+
+1. **Installation Check**: The script verifies whether `ss` is installed.
+2. **TCP Listening**: Shows the list of listening TCP connections.
+3. **Established Connections**: Displays all established TCP and UDP connections.
+4. **Statistics Summary**: Summarizes socket statistics like dropped packets.
+5. **Process Info**: Shows processes using TCP connections.
+6. **Routing Table**: Displays the routing table of your system.
+
+### 6. 📊 Graph: How Data Travels Through a Socket <a name="graph-how-data-travels-through-a-socket"></a>
+
+Below is a graphical representation of how data moves between a client and a server through sockets:
+
+```mermaid
+graph TD;
+    Client[Client Application] -->|Sends Data| Socket[Socket];
+    Socket -->|Transmits via| Network[Network];
+    Network -->|Receives Data| Server[Server Application];
+    Server -->|Acknowledges| Client;
+```
+
+This flow showcases how data is transmitted reliably via TCP, and how sockets facilitate this communication.
+
+---
+
 ## 146. **curl and ping commands**
 
 ### How to Use **curl**?
